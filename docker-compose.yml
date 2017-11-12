@@ -10,7 +10,10 @@ services:
       - mysql:/var/lib/mysql
 
   hello_docker:
-    image: bestofsong/hello-docker
+    image: bestofsong/hello_docker:0.0.1
+    ports:
+      - "80:80"
+
     environment:
       - DB_PORT=3306
       - DB_IP=mysql
